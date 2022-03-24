@@ -6,5 +6,5 @@ module "application-server" {
   name                 = "Simple Web App"
   device-index         = 0
   network-interface-id = aws_network_interface.simple-web-app.id
-  repository-url       = "repo URL"
+  repository-url       = aws_ecr_repository.simple-web-app.repository_url
 }
